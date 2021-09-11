@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Get Quote Client Form</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+
+<!-- Loading Modal -->
+<div class="modal fade" id="loadingModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="loadingModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <svg version="1.1" id="L7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+          <path fill="#5BAFA2" d="M31.6,3.5C5.9,13.6-6.6,42.7,3.5,68.4c10.1,25.7,39.2,38.3,64.9,28.1l-3.1-7.9c-21.3,8.4-45.4-2-53.8-23.3
+           c-8.4-21.3,2-45.4,23.3-53.8L31.6,3.5z">
+              <animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="2s" from="0 50 50" to="360 50 50" repeatCount="indefinite"></animateTransform>
+           </path>
+          <path fill="#5BAFA2" d="M42.3,39.6c5.7-4.3,13.9-3.1,18.1,2.7c4.3,5.7,3.1,13.9-2.7,18.1l4.1,5.5c8.8-6.5,10.6-19,4.1-27.7
+           c-6.5-8.8-19-10.6-27.7-4.1L42.3,39.6z">
+              <animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="1s" from="0 50 50" to="-360 50 50" repeatCount="indefinite"></animateTransform>
+           </path>
+          <path fill="#5BAFA2" d="M82,35.7C74.1,18,53.4,10.1,35.7,18S10.1,46.6,18,64.3l7.6-3.4c-6-13.5,0-29.3,13.5-35.3s29.3,0,35.3,13.5
+           L82,35.7z">
+              <animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="2s" from="0 50 50" to="360 50 50" repeatCount="indefinite"></animateTransform>
+           </path>
+         </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+	<div class="bg-contact3" style="background-image: url('images/bg-01.jpg');">
+		<div class="container-contact3">
+			<div class="wrap-contact3">
+				<form id="quoteForm" class="contact3-form validate-form">
+					<span class="contact3-form-title">
+						Shipment
+					</span>
+
+					<div class="wrap-contact3-form-radio">
+						<div class="contact3-form-radio">
+							<input class="input-radio3" id="radio2" type="radio" name="choice" value="get-quote" checked="checked">
+							<label class="label-radio3" for="radio2">
+								Get a Quote
+							</label>
+						</div>
+					</div>
+
+					<div class="wrap-input3 validate-input" data-validate="Pickup Postcode is required">
+						<input class="input3" type="text" name="ppcode" minlength="7" placeholder="Pickup Postcode...">
+						<span class="focus-input3"></span>
+					</div>
+
+					<div class="wrap-input3 validate-input" data-validate="Delivery Postcode is required">
+						<input class="input3" type="text" name="dpcode" minlength="7" placeholder="Delivery Postcode...">
+						<span class="focus-input3"></span>
+					</div>
+
+					<div class="wrap-input3">
+						<div>
+							<select class="selection-2" name="vehicle">
+								<option value="bicycle">Bicycle</option>
+								<option value="motorbike">Motorbike</option>
+								<option value="parcel_car">Parcel Car</option>
+								<option value="small_van">Small Van</option>
+								<option value="large_van">Large Van</option>
+							</select>
+						</div>
+						<span class="focus-input3"></span>
+					</div>
+
+					<div class="container-contact3-form-btn">
+						<button class="contact3-form-btn">
+							Submit
+						</button>
+					</div>
+
+					<div class="pt-1">
+						<span id="quoteMsg"></span>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<script>
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>
